@@ -7,7 +7,7 @@ body {
     align-items: center;
     padding-top: 2rem;
     font-family: 'Raleway', Arial, sans-serif;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 /* Card 1 */
@@ -82,11 +82,16 @@ body {
     padding: 20px 40px;
 }
 
+.card2:hover{
+    height: 420px;
+}
+
 .card2 .imgbox{
     position: relative;
     width: 100%;
     height: 100%;
     transform: translateY(-60px);
+    z-index: 1;
 }
 
 .card2 img{
@@ -95,4 +100,27 @@ body {
     max-height: 300px;
     object-fit: cover;
     height: 100%;
+}
+
+.card2 .content {
+    padding: 10px 20px;
+    text-align: center;
+    color: #111;
+    transition: .3s;
+    transform: translateY(-520px);
+    opacity: 0;
+    position: static;
+
+    h2{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+}
+
+.card2:hover .content{
+    opacity: 1;
+    transform: translateY(-150px);
 }
